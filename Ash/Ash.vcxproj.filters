@@ -1,36 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="Ash">
+      <UniqueIdentifier>{A1D6870B-0DE0-877C-965B-9E7C0264937C}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
-    </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="Ash\Events">
+      <UniqueIdentifier>{65A37756-515B-B9A3-BA62-92FFA6395494}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="src\Ash\Core.h" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="src\Ash.h" />
     <ClInclude Include="src\Ash\Application.h">
-      <Filter>Header Files</Filter>
+      <Filter>Ash</Filter>
     </ClInclude>
-    <ClInclude Include="src\Ash.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="src\Ash\Core.h">
+      <Filter>Ash</Filter>
     </ClInclude>
     <ClInclude Include="src\Ash\EntryPoint.h">
-      <Filter>Header Files</Filter>
+      <Filter>Ash</Filter>
     </ClInclude>
+    <ClInclude Include="src\Ash\Events\ApplicationEvent.h">
+      <Filter>Ash\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ash\Events\Event.h">
+      <Filter>Ash\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ash\Events\KeyEvent.h">
+      <Filter>Ash\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ash\Events\MouseEvent.h">
+      <Filter>Ash\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ash\Log.h">
+      <Filter>Ash</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ahpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Ash\Application.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Ash</Filter>
     </ClCompile>
+    <ClCompile Include="src\Ash\Log.cpp">
+      <Filter>Ash</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ahpch.cpp" />
   </ItemGroup>
 </Project>

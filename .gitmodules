@@ -1,0 +1,6 @@
+[submodule "Ash/vendor/spdlog"]
+	path = Ash/vendor/spdlog
+	url = https://github.com/gabime/spdlog
+[submodule "Ash/vendor/GLFW"]
+	path = Ash/vendor/GLFW
+	url = https://github.com/TheCherno/GLFW

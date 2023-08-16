@@ -1,2 +1,2 @@
 # Ash
-Ash Engine
+The Ash Game Engine is a real-time rendering engine built with a focus on providing a solid foundation for creating 2D and 3D games. This engine follows the footsteps of the Hazel Game Engine, as demonstrated in the Game Engine tutorial series by Cherno on YouTube. We aim to learn and develop our skills in game engine architecture and design by following along with the tutorial while naming our engine "Ash."
