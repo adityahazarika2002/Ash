@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Ash/vendor/GLFW/include"
+IncludeDir["Glad"] = "Ash/vendor/Glad/include"
 
 include "Ash/vendor/GLFW"
+include "Ash/vendor/Glad"
 
 project "Ash"
 	location "Ash"
@@ -38,12 +40,14 @@ project "Ash"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}"
 	}
 
 	links
 	{
 		"GLFW",
+		"Glad",
 		"opengl32.lib",
 		"dwmapi.lib"
 	}
@@ -56,7 +60,8 @@ project "Ash"
 		defines
 		{
 			"AH_PLATFORM_WINDOWS",
-			"AH_BUILD_DLL"
+			"AH_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 
 		postbuildcommands 

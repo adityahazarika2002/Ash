@@ -3,7 +3,8 @@
 
 #include "Ash/Log.h"
 
-#include <GLFW/glfw3.h>
+#include <Glad/glad.h>
+
 
 namespace Ash {
 
