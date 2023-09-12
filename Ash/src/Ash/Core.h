@@ -10,4 +10,12 @@
 	#error Ash only supports Windows!
 #endif
 	
+#ifdef AH_ENABLE_ASSERTS 
+	#define AH_ASSERT(x, ...) { if(!(x)) { AH_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+	#define AH_CORE_ASSERT(x, ...) { if(!(x)) { AH_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
+#else
+	#define AH_ASSERT(x, ...)
+	#define AH_CORE_ASSERT(x, ...)
+#endif
+ 
 #define BIT(x) (1 << x)

@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "Ash/Log.h"
+
 #ifdef AH_PLATFORM_WINDOWS
 	#include <Windows.h>
 #endif

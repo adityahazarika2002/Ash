@@ -14,7 +14,7 @@ namespace Ash {
 		KeyEvent(int keycode)
 			: m_KeyCode(keycode) {}
 
-		int m_KeyCode
+		int m_KeyCode;
 	};
 
 	class ASH_API KeyPressedEvent : public KeyEvent
@@ -28,7 +28,7 @@ namespace Ash {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss < "KeyPressedEvent: " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
+			ss << "KeyPressedEvent: " << m_KeyCode << " (" << m_RepeatCount << " repeats)";
 			return ss.str();
 		}
 
@@ -46,7 +46,7 @@ namespace Ash {
 		std::string ToString() const override
 		{
 			std::stringstream ss;
-			ss < "KeyReleasedEvent: " << m_KeyCode;
+			ss << "KeyReleasedEvent: " << m_KeyCode;
 			return ss.str();
 		}
 

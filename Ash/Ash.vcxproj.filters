@@ -7,6 +7,12 @@
     <Filter Include="Ash\Events">
       <UniqueIdentifier>{65A37756-515B-B9A3-BA62-92FFA6395494}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Ash.h" />
@@ -31,8 +37,20 @@
     <ClInclude Include="src\Ash\Events\MouseEvent.h">
       <Filter>Ash\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Ash\Layer.h">
+      <Filter>Ash</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ash\LayerStack.h">
+      <Filter>Ash</Filter>
+    </ClInclude>
     <ClInclude Include="src\Ash\Log.h">
       <Filter>Ash</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Ash\Window.h">
+      <Filter>Ash</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
     </ClInclude>
     <ClInclude Include="src\ahpch.h" />
   </ItemGroup>
@@ -40,8 +58,17 @@
     <ClCompile Include="src\Ash\Application.cpp">
       <Filter>Ash</Filter>
     </ClCompile>
+    <ClCompile Include="src\Ash\Layer.cpp">
+      <Filter>Ash</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Ash\LayerStack.cpp">
+      <Filter>Ash</Filter>
+    </ClCompile>
     <ClCompile Include="src\Ash\Log.cpp">
       <Filter>Ash</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\ahpch.cpp" />
   </ItemGroup>

@@ -11,6 +11,12 @@ workspace "Ash"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Ash/vendor/GLFW/include"
+
+include "Ash/vendor/GLFW"
+
 project "Ash"
 	location "Ash"
 	kind "SharedLib"
@@ -31,7 +37,15 @@ project "Ash"
 	includedirs
 	{
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+
+	links
+	{
+		"GLFW",
+		"opengl32.lib",
+		"dwmapi.lib"
 	}
 
 	filter "system:windows"
@@ -53,14 +67,17 @@ project "Ash"
 
 	filter "configurations:Debug"
 		defines "AH_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "AH_RELEASE"
+		buildoptions "/MD"
 		symbols "On"
 
 	filter "configurations:Dist"
 		defines "AH_DIST"
+		buildoptions "/MD"
 		symbols "On"
 
 
@@ -102,12 +119,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 		defines "AH_DEBUG"
+		buildoptions "/MDd"
 		symbols "On"
 
 	filter "configurations:Release"
 		defines "AH_RELEASE"
-		symbols "On"
+		buildoptions "/MD"
+		optimize "On"
 
 	filter "configurations:Dist"
 		defines "AH_DIST"
-		symbols "On"
+		buildoptions "/MD"
+		optimize "On"
