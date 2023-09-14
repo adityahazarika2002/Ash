@@ -60,7 +60,7 @@ namespace Ash {
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
 			data.Width = width;
-			data.Height = width;
+			data.Height = height;
 
 			WindowResizeEvent event(width, height);
 			data.EventCallback(event);
@@ -131,7 +131,7 @@ namespace Ash {
 		glfwSetCursorPosCallback(m_Window, [](GLFWwindow* window, double xPos, double yPos)
 		{
 			WindowData& data = *(WindowData*)glfwGetWindowUserPointer(window);
-			MouseMovedEvent event((float)xPos, (float)xPos);
+			MouseMovedEvent event((float)xPos, (float)yPos);
 			data.EventCallback(event);
 		});
 
