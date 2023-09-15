@@ -10,6 +10,10 @@
 	#error Ash only supports Windows!
 #endif
 	
+#ifdef AH_DEBUG
+	#define AH_ENABLE_ASSERTS
+#endif
+
 #ifdef AH_ENABLE_ASSERTS 
 	#define AH_ASSERT(x, ...) { if(!(x)) { AH_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define AH_CORE_ASSERT(x, ...) { if(!(x)) { AH_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }

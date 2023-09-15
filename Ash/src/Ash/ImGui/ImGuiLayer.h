@@ -7,6 +7,7 @@
 #include "Ash/Events/ApplicationEvent.h"
 
 
+
 namespace Ash {
 
 	class ASH_API ImGuiLayer : public Layer
@@ -26,7 +27,7 @@ namespace Ash {
 		bool OnMouseScrolledEvent(MouseScrolledEvent& e);
 		bool OnKeyPressedEvent(KeyPressedEvent& e);
 		bool OnKeyReleasedEvent(KeyReleasedEvent& e);
-		//bool OnKeyTypedEvent(KeyTypedEvent& e);
+		bool OnKeyTypedEvent(KeyTypedEvent& e);
 		bool OnWindowResizeEvent(WindowResizeEvent& e);
 
 	private:
