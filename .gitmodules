@@ -7,3 +7,6 @@
 [submodule "Ash/vendor/imgui"]
 	path = Ash/vendor/imgui
 	url = https://github.com/TheCherno/imgui/
+[submodule "Ash/vendor/glm"]
+	path = Ash/vendor/glm
+	url = https://github.com/g-truc/glm

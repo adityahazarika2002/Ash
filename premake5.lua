@@ -16,6 +16,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "Ash/vendor/GLFW/include"
 IncludeDir["Glad"] = "Ash/vendor/Glad/include"
 IncludeDir["ImGui"] = "Ash/vendor/imgui"
+IncludeDir["glm"] = "Ash/vendor/glm"
 
 include "Ash/vendor/GLFW"
 include "Ash/vendor/Glad"
@@ -36,7 +37,9 @@ project "Ash"
 	files
 	{
 		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp"
+		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl"
 	}
 
 	includedirs
@@ -45,7 +48,8 @@ project "Ash"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links
@@ -73,7 +77,6 @@ project "Ash"
 			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Sandbox/\"")
 		}
 
-
 	filter "configurations:Debug"
 		defines "AH_DEBUG"
 		runtime "Debug"
@@ -88,8 +91,6 @@ project "Ash"
 		defines "AH_DIST"
 		runtime "Release"
 		symbols "On"
-
-
 
 project "Sandbox"
 	location "Sandbox"
@@ -109,7 +110,9 @@ project "Sandbox"
 	includedirs
 	{
 		"Ash/vendor/spdlog/include",
-		"Ash/src"
+		"Ash/src",
+		"Ash/vendor",
+		"%{IncludeDir.glm}"
 	}
 
 	links
