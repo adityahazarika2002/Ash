@@ -5,6 +5,8 @@
 
 #include <Glad/glad.h>
 
+#include "Ash/Input.h"
+
 
 namespace Ash {
 

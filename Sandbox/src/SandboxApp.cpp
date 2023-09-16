@@ -10,12 +10,19 @@ public:
 
 	void OnUpdate() override
 	{
-		AH_INFO("ExampleLayer::Update");
+		if (Ash::Input::IsKeyPressed(AH_KEY_TAB))
+			AH_TRACE("Tab key is pressed (poll)!");
 	}
 
 	void OnEvent(Ash::Event& event) override
 	{
-		AH_TRACE("{0}", event);
+		if (event.GetEventType() == Ash::EventType::KeyPressed)
+		{
+			Ash::KeyPressedEvent& e = (Ash::KeyPressedEvent&)event;
+			if (e.GetKeyCode() == AH_KEY_TAB)
+				AH_TRACE("Tab key is pressed (event)!");
+			AH_TRACE("{0}", (char)e.GetKeyCode());
+		}
 	}
 };
 

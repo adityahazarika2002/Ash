@@ -150,14 +150,18 @@
     <ClInclude Include="src\Ash\EntryPoint.h" />
     <ClInclude Include="src\Ash\Events\ApplicationEvent.h" />
     <ClInclude Include="src\Ash\Events\Event.h" />
+    <ClInclude Include="src\Ash\Input.h" />
     <ClInclude Include="src\Ash\Events\KeyEvent.h" />
     <ClInclude Include="src\Ash\Events\MouseEvent.h" />
     <ClInclude Include="src\Ash\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Ash\Keycodes.h" />
     <ClInclude Include="src\Ash\Layer.h" />
     <ClInclude Include="src\Ash\LayerStack.h" />
     <ClInclude Include="src\Ash\Log.h" />
+    <ClInclude Include="src\Ash\MouseButtonCodes.h" />
     <ClInclude Include="src\Ash\Window.h" />
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\ahpch.h" />
   </ItemGroup>
@@ -168,6 +172,7 @@
     <ClCompile Include="src\Ash\LayerStack.cpp" />
     <ClCompile Include="src\Ash\Log.cpp" />
     <ClCompile Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.cpp" />
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\ahpch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
